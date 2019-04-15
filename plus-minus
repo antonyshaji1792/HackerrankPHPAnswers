@@ -1,0 +1,31 @@
+<?php
+//Plus Minus
+
+//https://www.hackerrank.com/challenges/plus-minus/problem
+
+$arr = array(-4, 3, -9, 0, 4, 1);
+
+$count = sizeof($arr);
+$positive = $negative = $zero = 0;
+foreach ($arr as $key => $value) {
+    if($value >0){
+
+        $positive++;
+    }elseif($value < 0 ){
+
+        $negative++;
+
+    }else{
+
+        $zero++;
+    }
+
+}
+
+$new_array = array(number_format((float)($positive/$count), 6, '.', ''),number_format((float)($negative/$count), 6, '.', ''),number_format((float)($zero/$count), 6, '.', ''));
+
+foreach ($new_array as $key => $value) {
+    echo $value."\n";
+}
+
+?>
