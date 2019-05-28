@@ -1,0 +1,17 @@
+<?php
+
+//Mini-Max Sum
+
+//https://www.hackerrank.com/challenges/mini-max-sum/problem
+
+$arr = array(1, 2, 3, 4, 5);
+
+$min = array_sum($arr)-max($arr);
+$max = array_sum($arr)-min($arr);
+
+$result = $min .' '. $max;
+
+return $result;
+
+
+?>
