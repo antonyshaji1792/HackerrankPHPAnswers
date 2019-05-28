@@ -1,0 +1,17 @@
+Bon Appétit
+
+//https://www.hackerrank.com/challenges/bon-appetit/
+
+function bonAppetit($bill, $k, $b) {
+    
+    $temp = ((array_sum($bill) - $bill[$k])/2);
+
+    if($b == $temp) {
+
+        echo "Bon Appetit";
+    }else{
+
+        echo $b-$temp;
+    }
+
+}
