@@ -3,9 +3,9 @@
 
 //https://www.hackerrank.com/challenges/plus-minus/problem
 
-$arr = array(-4, 3, -9, 0, 4, 1);
+function plusMinus($arr) {
 
-$count = sizeof($arr);
+    $count = sizeof($arr);
 $positive = $negative = $zero = 0;
 foreach ($arr as $key => $value) {
     if($value >0){
@@ -26,6 +26,9 @@ $new_array = array(number_format((float)($positive/$count), 6, '.', ''),number_f
 
 foreach ($new_array as $key => $value) {
     echo $value."\n";
+}
+
+
 }
 
 ?>
