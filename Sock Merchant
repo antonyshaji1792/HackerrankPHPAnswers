@@ -1,0 +1,15 @@
+<?php
+
+//Sock Merchant
+
+//https://www.hackerrank.com/challenges/sock-merchant/problem
+
+    $values = (array_count_values($ar));
+    $result =0;
+    foreach ($values as $key => $value) {
+        $count = $value/2;
+        $result += floor($count);
+        
+    }
+    return $result;
+?>
