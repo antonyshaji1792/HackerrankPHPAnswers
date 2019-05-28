@@ -1,0 +1,29 @@
+<?php
+
+//Angry Professor
+
+//https://www.hackerrank.com/challenges/angry-professor/problem
+
+function angryProfessor($k, $a) {
+
+    $count = 0;
+    
+    foreach ($a as $key => $value) {
+       
+        if($value<=0){
+    
+            $count++;
+            
+        }
+    }
+    
+    if($count>=$k){
+    
+        return "NO";
+    }else{
+    
+        return "YES";
+    }
+    
+    }
+?>
