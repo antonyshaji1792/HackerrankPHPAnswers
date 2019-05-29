@@ -1,0 +1,32 @@
+<?php 
+
+//Birthday Chocolate
+
+//https://www.hackerrank.com/challenges/the-birthday-bar/
+
+function birthday($s, $d, $m) {
+
+$count = 0;
+$n = sizeof($s);
+$count = 0;
+for ($x=0; $x<$n; $x++){
+  $scount = 1;
+  $l = FALSE; 
+  $sum = 0;
+  foreach ($s as $key => $value) {
+    if ($x == $key)
+      $l = TRUE; 
+    if ($l == TRUE && ($scount <= $m)) {
+      echo $value." | ";
+      $sum += $value;
+      $scount++;
+    }
+  }
+  echo $sum."<br>";
+  if($sum == $d)
+    $count++;
+}
+return $count;
+}
+
+?>
