@@ -1,0 +1,27 @@
+<?php
+
+//Find Digits
+//https://www.hackerrank.com/challenges/find-digits/
+
+function findDigits($n) {
+
+    $array  = array_map('intval', str_split($n));
+    $count=0;
+    
+    foreach ($array as $key => $value) {
+    
+        if($value!=0)
+        {
+            if($n%$value==0) {
+    
+                $count++;
+            }
+        }
+        
+    
+    }
+    
+    return $count;
+    }
+    
+?>
