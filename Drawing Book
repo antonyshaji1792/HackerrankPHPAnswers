@@ -1,0 +1,20 @@
+<?php
+
+//Drawing Book
+//https://www.hackerrank.com/challenges/drawing-book
+
+function pageCount($n, $p) {
+      
+    if(($n-$p)>$p){
+        $count = ($p)/2;
+        return floor($count);
+    }else{
+
+        $count = ($n-$p)/2;
+        return floor($count);
+    }
+
+}
+
+
+?>
