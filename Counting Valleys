@@ -1,0 +1,36 @@
+<?php
+
+//Counting Valleys
+
+//https://www.hackerrank.com/challenges/counting-valleys/
+
+function countingValleys($n, $s) {
+
+$n = strlen($s);
+
+$sea_level = array();
+$sea = 0;
+$points_gained = 0;
+$down = $count = 0;
+for ($i=0; $i < $n; $i++) { 
+
+    if ($s[$i] == "U") {
+        $count++;
+        array_push($sea_level, $count);
+    }else{
+        $count--;
+        array_push($sea_level, $count);
+        if ($count < 0) {
+            $down = 1;
+        }
+        
+    }
+    if ($count == 0 && $down == 1) {
+        $sea++;
+        $down = 0;
+    }
+    
+}
+return  $sea; 
+
+}
