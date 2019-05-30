@@ -1,0 +1,13 @@
+<?php
+
+//CamelCase
+
+//https://www.hackerrank.com/challenges/camelcase/
+
+function camelcase($s) {
+
+    return strlen(preg_replace('![^A-Z]+!', '', $s))+1;
+    
+}
+
+?>
