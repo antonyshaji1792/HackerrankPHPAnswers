@@ -1,0 +1,28 @@
+<?php
+
+//Electronics Shop
+
+//https://www.hackerrank.com/challenges/electronics-shop/
+
+function getMoneySpent($keyboards, $drives, $b) {
+    foreach ($keyboards as $key => $value1) {
+       foreach ($drives as $key => $value2) {
+           if(($value1 + $value2)<$b){
+   
+               $new_array[] = ($value1 + $value2);
+               
+           }
+       }
+   }
+   if(sizeof($new_array)==0){
+   
+       return "-1";
+   
+   }else{
+   
+       return max($new_array);
+   }
+   }
+
+   
+?>
