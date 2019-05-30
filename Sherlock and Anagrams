@@ -1,0 +1,87 @@
+<?php
+//Sherlock and Anagrams
+
+//https://www.hackerrank.com/challenges/sherlock-and-anagrams/
+
+
+$s = "kkkk";
+
+// $s = str_split($s);
+echo "<pre>";
+// print_r($s);
+$count = 0;
+$s = array("one", "two", "three", "four");
+
+$size = sizeof($s);
+
+
+
+for ($i=0; $i < $size; $i++) { 
+    $z= $i+1;
+  for ($j=$z; $j < $size; $j++) { 
+    
+    $newarray[] = array($s[$i],$s[$j]);
+
+  }
+
+
+}
+
+print_r($newarray);
+
+
+die;
+
+
+foreach ($s as $key => $s1value) {
+
+  foreach ($s as $key => $s2value) {
+   
+    $newarray[] = array($s1value,$s2value);
+
+  }
+  
+  
+
+}
+
+print_r($newarray);
+
+die;
+
+for ($j=1; $j < $size; $j++) { 
+
+  for ($i=0; $i < $size-($j-1); $i++) { 
+    
+    // echo $i."........".$j."<br>";
+    // print_r(array_slice($s, $i, $j));
+
+    $newarray[] = array_slice($s, $i, $j);
+    // $j++;
+
+
+  }
+}
+
+print_r($newarray);
+die;
+
+foreach ($newarray as $newarrayvalue) {
+ 
+  sort($newarrayvalue);
+   $sortarray[]= join($newarrayvalue);
+
+   
+
+}
+
+
+print_r($sortarray);
+
+// print_r(array_unique($sortarray));
+
+$result = count($sortarray) - count(array_unique($sortarray));
+
+echo $result;
+
+?>
