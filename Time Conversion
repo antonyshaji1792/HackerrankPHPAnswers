@@ -1,0 +1,13 @@
+<?php
+
+//Time Conversion
+
+//https://www.hackerrank.com/challenges/time-conversion/problem
+
+function timeConversion($s) {
+
+    return date("H:i:s", strtotime("$s"));
+
+}
+
+?>
