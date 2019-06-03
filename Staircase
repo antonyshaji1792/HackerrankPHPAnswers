@@ -1,0 +1,16 @@
+<?php
+
+//Staircase
+
+//https://www.hackerrank.com/challenges/staircase/problem
+
+function staircase($n) {
+
+    for ($row = 0; $row < $n; $row ++) {
+        echo str_repeat(" ", ($n-($row+1))).str_repeat("#", ($row) + 1)."\n";
+    
+    }
+    
+}
+
+?>
