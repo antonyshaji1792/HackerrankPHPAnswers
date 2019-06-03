@@ -1,0 +1,27 @@
+<?php
+
+//Birthday Cake Candles
+
+//https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+
+function birthdayCakeCandles($ar) {
+
+    $armax = max($ar);
+    
+    $count = 0;
+    
+    foreach ($ar as $key => $arvalue) {
+       
+        if($arvalue == $armax){
+    
+            $count++;
+    
+        }
+    }
+    
+    return $count;
+    
+    }
+    
+
+?>
