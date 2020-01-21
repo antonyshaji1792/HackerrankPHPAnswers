@@ -1,0 +1,23 @@
+<?php 
+
+//https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem
+
+function jumpingOnClouds($c) {
+
+  $win = count($c)-1;
+  $current_position = 0;
+  $jump = 0;
+  
+  while($current_position<$win){
+    if($c[$current_position+2] == 1){
+      $current_position += 1;
+    }else{
+      $current_position += 2;
+    }
+    $jump++;
+  
+  }
+  
+  return $jump;
+  
+  }
