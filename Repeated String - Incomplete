@@ -1,0 +1,27 @@
+<?php
+https://www.hackerrank.com/challenges/repeated-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
+$s = "abc";
+$n = 10;
+
+$news = str_split($s);
+$resultarray = array();
+$j = 0;
+for ($i=0; $i < $n; $i++) {
+  array_push($resultarray,$news[$j]);
+  $j++;
+  if($j==sizeof($news)){
+    $j = 0;
+  }
+}
+
+$cnt = count(array_filter($resultarray,function($a) {return $a=='a';}));
+echo $cnt;
+
+
+
+ERROR
+
+mmap() failed: [12] Cannot allocate memory
+mmap() failed: [12] Cannot allocate memory
+mmap() failed: [12] Cannot allocate memory
+PHP Fatal error:  Out of memory (allocated 270536704) (tried to allocate 536870920 bytes) in solution.php on line 10
