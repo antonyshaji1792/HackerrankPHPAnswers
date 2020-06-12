@@ -1,0 +1,19 @@
+https://www.hackerrank.com/challenges/repeated-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
+
+
+function repeatedString($s, $n) {
+
+    $s = str_split($s);
+    $strlen = sizeof($s);
+    $news = array();
+    $j = 0;
+    for ($i=0; $i < $n; $i++) { 
+        if($j == ($strlen)){
+          $j = 0;
+        }
+        array_push($news,$s[$j]);
+        $j++;
+    }
+    return array_count_values($news)['a'];
+
+}
